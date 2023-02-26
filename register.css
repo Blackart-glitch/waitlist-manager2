@@ -1,0 +1,62 @@
+  .form{
+    margin: 0% 4%;
+    padding: 3% 3%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    min-height: 300%;
+}
+.form h1{
+    margin-left: 20%;
+    font-family:  monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.form a{
+  text-decoration: none;
+  color: rgb(7, 164, 243);
+  letter-spacing: 3px;
+}
+.form span{
+    margin: 1% 20% 1%;
+}
+input {
+    margin: 1% 20% 1%;
+}
+input[type=email], [type=password], [type=text], [type=tel] {
+    width: 25%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input[type=submit] {
+    width: 25%;
+    background-color: rgb(128, 123, 123);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+input[type=email]:hover, [type=password]:hover, [type=text]:hover, [type=tel]:hover {
+    border: 1px solid blue; 
+  }  
+input[type=submit]:hover {
+    background-color: #c8d1c8;
+    color: black;
+    font-size: larger;
+  } 
+div{
+    margin: 0% 4%;
+    padding: 3% 3%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 200%;
+}
+.login a:hover {
+    font-size: larger;
+    color: rgb(122, 238, 122);
+}

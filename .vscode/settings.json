@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.smoothScrolling": true,
+    "editor.columnSelection": false,
+    "editor.multiCursorMergeOverlapping": true,
+    "editor.multiCursorModifier": "ctrlCmd"
+}
