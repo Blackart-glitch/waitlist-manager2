@@ -153,7 +153,34 @@
     background-color: rgb(253, 244, 244);
     border: 2px solid grey;
 }
-
+#info_popup {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+.info_body {
+    background-color: #fff;
+    width: 50%;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    color: blue;
+  }
+  
+#close-popup-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
 footer {
     margin: 2% 1%;
     background-color: white;

@@ -45,7 +45,16 @@
                     </select><br>
                     <input type="submit" id='info_join' name="checker" value="CHECK SCHEDULE" >
                 </form>
-
+        <div id="info-popup">
+        <h4>Waitlist info</h4>
+        <div class="info_body">
+            <span class="elmnt">total number of seats occupied</span><br>
+            <span class="elmnt">You are currently number 8 on the list</span><br>
+            <span class="elmnt">mode of entry:: physical</span><br>
+            <span class="elmnt">current time:: 15:30pm</span><br>
+            <span class="elmnt">manager online and is actively replying to all attendees</span><br>
+        </div>
+    </div>
             </div>
             <div class="right_nav">
                 <!-- the top card of the right section of the page -->
@@ -89,16 +98,7 @@
         </div>
 
 
-    <div id="info-popup">
-        <h4>Waitlist info</h4>
-        <div class="info_body">
-            <span class="elmnt">total number of seats occupied</span><br>
-            <span class="elmnt">You are currently number 8 on the list</span><br>
-            <span class="elmnt">mode of entry:: physical</span><br>
-            <span class="elmnt">current time:: 15:30pm</span><br>
-            <span class="elmnt">manager online and is actively replying to all attendees</span><br>
-        </div>
-    </div>
+
 
 <script>
 // Get the button and the pop-up element
