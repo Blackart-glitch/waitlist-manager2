@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-/* function get_ID($email, $p_word, $conn){
+ function get_ID($email, $p_word, $conn){
     $check =  "SELECT * FROM users WHERE Email = '$email' AND P_word = '$p_word' ";
     $check = mysqli_query($conn, $check);
     if (! $check){
@@ -22,7 +22,7 @@ if ($conn->connect_error) {
         mysqli_free_result($check); //clears the result of the query from this $check variable
         return $uid;
     }
-} */
+} 
 
 
 
