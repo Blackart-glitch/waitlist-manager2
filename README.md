@@ -5,9 +5,10 @@ it allows for easy appointment bookings
 - you get an in site message if it's your turn to be attended to
 - so many other functionalities
 ## i tried hard to keep the site super simple UI
-|file                |       description                                                                |
-|All .CSS files      | for stylings
-|bootstrap-5.0.2-dist, css folders| Bootstrap 5
+|file                |       description      |
+|--------------------|------------------------|                                                          |
+|All .CSS files      | for stylings|
+|bootstrap-5.0.2-dist, css folders| Bootstrap 5|
 |dashboard.php| This is a PHP script that starts a session, includes a file for database connection, and retrieves user data from the database. It also fetches waitlists joined by the user and waitlists created by other users, and allows the user to join, remove, skip, or clear waitlists. The script uses SQL queries to interact with the database and header() function to redirect the user to a different page.
 |authentication.php|  * The function handles user registration and login by validating input, checking for existing accounts, and performing SQL queries. 
 - @param data The code is a PHP script that handles user registration and login functionality. It starts a session, includes a database connection file, and initializes variables for user input. The
