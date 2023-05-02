@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include 'database_connect.php';
@@ -11,6 +12,7 @@ if (!isset($_SESSION['Email']) && !isset($_SESSION['Password'])){
     $email = $_SESSION['Email'] ;
     $p_word = $_SESSION['Password'];
 }
+
 
 // this block retrieves user data from the database table "users"
 $check = "SELECT * FROM users WHERE Email = '$email' AND P_word = '$p_word' ";
@@ -58,8 +60,7 @@ if (isset($_POST['join'])){
         $check = mysqli_query($conn, $check);
     }
 
-    
-
+    header("Location: ".$_SERVER['PHP_SELF']);
 }
 
 // fetches all waitlists and their respective codes except the user's waitlist from table "waitlist_created"
@@ -72,6 +73,36 @@ array_push($joiner2, $rowg['waitlist'] );
 $i++;
 }
 mysqli_free_result($check); //clears the result of the query from this $check variable
+//fetches all waitlist created by the user
+$check = "SELECT waitlist FROM waitlists_created WHERE ID = '$uid' ";
+$check = mysqli_query($conn, $check);
+$i = 0;
+$joiner3 = []; //joiner is the array to store all joined waitlist names and codes
+while ($rowgg = mysqli_fetch_assoc($check)){
+array_push($joiner3, $rowgg['waitlist'] );
+$i++;
+}
+mysqli_free_result($check);
 
+
+if(isset($_POST['remove'])){
+    $room = $_POST['room'];
+    $check = "DELETE FROM `waitlists_joined` WHERE `waitlists_joined`.`Email` = '$email' AND `waitlists_joined`.`waitlist` = '$room'";
+    $check = mysqli_query($conn, $check);
+    header("Location: ".$_SERVER['PHP_SELF']);
+}
+if(isset($_POST['skip'])){
+    $room = $_POST['room'];
+    $skipper = $_POST['nextapp'];
+    $check = "DELETE FROM `waitlists_joined` WHERE `waitlists_joined`.`Email` = '$skipper' AND `waitlists_joined`.`waitlist` = '$room'";
+    $check = mysqli_query($conn, $check);
+    header("Location: ".$_SERVER['PHP_SELF']);
+}
+if(isset($_POST['clear'])){
+    $room = $_POST['room'];
+    $check = "DELETE FROM `waitlists_joined` WHERE `waitlists_joined`.`waitlist` = '$room'";
+    $check = mysqli_query($conn, $check);
+    header("Location: ".$_SERVER['PHP_SELF']);
+}
 
 ?>
