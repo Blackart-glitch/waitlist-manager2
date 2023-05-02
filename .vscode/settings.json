@@ -3,5 +3,7 @@
     "editor.smoothScrolling": true,
     "editor.columnSelection": false,
     "editor.multiCursorMergeOverlapping": true,
-    "editor.multiCursorModifier": "ctrlCmd"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "docwriter.progress.trackFunctions": true,
+    "docwriter.progress.trackMethods": true
 }

@@ -22,8 +22,7 @@ if(isset($_POST['update'])){
     $check = "UPDATE users SET Displayname = '$name', Title = '$title', maxapps = '$apps', avab = '$avao', zoomemail = '$zmail' WHERE Email='$email' AND P_word='$p_word' ";
     $check = mysqli_query($conn, $check);
 
-/* This code block is updating the user's profile information in the database and creating a waitlist
-entry for the user. */
+    /* This code block is updating the user's profile information in the database and creating a waitlist entry for the user. */
     $uid = get_ID($email, $p_word, $conn);
     $sol = $name . " " . $title;
     $check = "SELECT ID FROM waitlists_created WHERE ID='$uid'";
