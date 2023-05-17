@@ -1,30 +1,145 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Lobbyx</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="homepage.css">
-    </head>
-    <body>
-        <div class="top_nav">
-            <a class="top_nav_box" href="register.php">Register</a>
-            <a class="top_nav_box" href="login.php">Login</a>
-            <a class="top_nav_box">About</a>
-            <a class="top_nav_box">Contact</a>
-            <a class="top_nav_box">Ban pan</a>
-        </div>
-            <div class="intro_sect">
-                <p>LOBBYX</p>
-                <p>self regulating automatic waitlist management system</p>
-            </div>
-            <div class="narrator">
 
-            </div>
-    </body>
-    <footer>
-        <div class="foot_blocks">
+<head>
+    <title>Lobbyx</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="jquerylib.js"></script>
+</head>
 
+<body>
+
+    <div class="top_nav">
+        <a class="top_nav_box" href="register.php">Register</a>
+        <a class="top_nav_box" href="login.php">Login</a>
+        <a class="top_nav_box">About</a>
+        <a class="top_nav_box">Contact</a>
+        <a style="float: right; color: orange; font-size: 50px;">LOBBYX</a>
+    </div>
+    <video autoplay loop muted id="caption-vid">
+        <source src="res/waiting-in-queue.webm" type="video/mp4">
+    </video>
+    <div id="slide-container">
+        <div class="slide">
+            <h3>Efficient Waitlist Management</h3>
+            <p>Our waitlist management software is designed to make managing your waitlist a breeze. Say goodbye to pen
+                and paper and hello to a modern, efficient system.</p>
         </div>
-    </footer>
+
+        <div class="slide">
+            <h3>Real-time Updates</h3>
+            <p>Our software provides real-time updates to help you stay on top of your waitlist. You'll know exactly how
+                long each party has been waiting, and you can easily add or remove parties as needed.</p>
+        </div>
+
+        <div class="slide">
+            <h3>Text and Email Notifications</h3>
+            <p>Keep your customers informed and engaged with text and email notifications. Our software sends automatic
+                notifications to let your customers know when their table is ready, reducing frustration and increasing
+                customer satisfaction.</p>
+        </div>
+
+        <div class="slide">
+            <h3>Customizable Waitlist</h3>
+            <p>Every restaurant has unique needs. That's why our waitlist management software is fully customizable. You
+                can set up your waitlist the way you want it, with custom fields, filters, and more.</p>
+        </div>
+
+        <div class="slide">
+            <h3>Robust Analytics Dashboard</h3>
+            <p>Gain insights into your waitlist performance with our robust analytics dashboard. Track wait times,
+                average party size, and other key metrics to help you make data-driven decisions that improve your
+                restaurant's efficiency and profitability.</p>
+        </div>
+
+        <div class="slide">
+            <h3>Seamless Integration</h3>
+            <p>Our software is designed to integrate seamlessly with your existing POS system. This means you won't need
+                to switch to a new system or learn a new interface – our software will work with what you already have
+                in place.</p>
+        </div>
+
+        <div class="slide">
+            <h3>Secure and Reliable</h3>
+            <p>Our waitlist management software is built with security and reliability in mind. We use industry-standard
+                encryption to protect your data, and our software is hosted on reliable servers to ensure maximum uptime
+                and performance.</p>
+        </div>
+
+        <div class="slide">
+            <h3>Affordable Pricing</h3>
+            <p>We believe that waitlist management software should be accessible to all restaurants, regardless of size
+                or budget. That's why our pricing is affordable and transparent, with no hidden fees or long-term
+                contracts.</p>
+        </div>
+        <div class="dots">
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="row">
+        <div class="col">
+            <h4>contact us &downarrow;</h4>
+            <a>Twitter</a><br>
+            <a>Facebook</a><br>
+            <a>Whatsapp</a><br>
+            <a>Email: hello@lobbyx.com</a><br>
+        </div>
+        <div class="col">
+            <h4>Find us &downarrow;</h4>
+            <a>10A Adeyemo Alakija St, Victoria Island, Lagos</a>
+            <a>21A Idejo St, Victoria Island, Lagos</a>
+            <a> 14 Allen Ave, Ikeja, Lagos</a>
+            <a>35 Opebi Rd, Opebi, Ikeja, Lagos</a>
+        </div>
+        <div class="col">
+            <h4>Message us &UpArrowDownArrow;</h4>
+            <form>
+                <input type="text" placeholder="Type here"><br>
+                <input type="submit" placeholder="SEND">
+            </form>
+        </div>
+    </div><br>
+    <div class="row">
+        <h5>All rights reserved, LOBBYX<sup>(TM)</sup></h5>
+    </div>
+</footer>
+<script>
+    $(document).ready(function () {
+        var slides = $('.slide');
+        var currentSlideIndex = 0;
+
+        // Append a dot for each slide
+        for (var i = 0; i < slides.length; i++) {
+            $('.dots').append($('<span>').attr({ class: 'dot' + i }));
+        }
+
+        // Hide all slides except the first one
+        slides.not(':first').hide();
+
+        // Set the first dot background color to green
+        $('.dot' + currentSlideIndex).css('background-color', 'green');
+
+        // Set an interval to show the next slide every 5 seconds
+        setInterval(function () {
+            // Hide the current slide
+            slides.eq(currentSlideIndex).fadeOut(2000, function () {
+                // Change the background color of the dot for the current slide to grey
+                $('.dot' + currentSlideIndex).css('background-color', 'orange');
+
+                // Increment the current slide index and wrap around if necessary
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+                // Show the next slide
+                slides.eq(currentSlideIndex).fadeIn(2000);
+
+                // Change the background color of the dot for the next slide to green
+                $('.dot' + currentSlideIndex).css('background-color', 'green');
+            });
+        }, 7000);
+    });
+</script>
+
 </html>

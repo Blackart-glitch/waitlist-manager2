@@ -1,16 +1,3 @@
-/**
- * The function handles user registration and login by validating input, checking for existing
- * accounts, and performing SQL queries.
- * 
- * @param data The code is a PHP script that handles user registration and login functionality. It
- * starts a session, includes a database connection file, and initializes variables for user input. The
- * `test_input()` function is a global function that sanitizes user input by removing whitespace,
- * slashes, and special characters.
- * 
- * @return There is no output being returned by the code. It is a PHP script that performs database
- * operations and redirects the user to different pages based on the actions they take (register or
- * login).
- */
 <?php
 session_start();
 include 'database_connect.php';
@@ -34,8 +21,9 @@ if (isset($_POST['register'])) {
   $email  = $_POST['email'];
   $tel    = $_POST['phone_no'];
   $p_word = $_POST['p_word'];
+  $state = $_POST['state'];
   // sql query to for registeration
-  $b = "INSERT INTO users (FirstName, LastName, Username, Email, Telephone, P_word) VALUES ('$f_name', '$l_name', '$u_name', '$email', '$tel', '$p_word')";
+  $b = "INSERT INTO users (FirstName, LastName, Username, Email, Telephone, P_word, state, Country) VALUES ('$f_name', '$l_name', '$u_name', '$email', '$tel', '$p_word', '$state', 'Nigeria')";
   // sql query to check if theres an existing account
   $check = "SELECT * FROM users WHERE Email = '$email' ";
   $check = $conn->query($check); //performs the query

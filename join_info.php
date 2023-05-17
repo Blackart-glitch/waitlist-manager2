@@ -154,5 +154,4 @@ else{
     );
     echo json_encode($results);
 }
-
 ?>

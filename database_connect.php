@@ -22,9 +22,4 @@ if ($conn->connect_error) {
         mysqli_free_result($check); //clears the result of the query from this $check variable
         return $uid;
     }
-} 
-
-
-
-
-?>
+}

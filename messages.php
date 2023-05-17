@@ -46,5 +46,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     //print_r($result);
 echo json_encode($result);
-  
-?>

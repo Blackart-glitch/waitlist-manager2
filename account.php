@@ -17,14 +17,14 @@
     <div class="body_wrap">
 
         <div class="left_nav">
+            <form action="logout.php" method="post">
+                <input type="submit" name="logout" value="Logout">
+            </form>
             <div class="profilepic">
-
+                <h4><?php echo $f_name . " " . $l_name; ?></h4>
             </div>
             <div class="acc_ID">
-                <p><?php echo "UID" . $uid; ?></p>
-            </div>
-            <div class="f_name">
-                <p><?php echo $f_name . " " . $l_name; ?></p>
+                <p><?php echo "UID " . $uid; ?></p>
             </div>
             <div class="email">
                 <p><?php echo $email; ?></p>
@@ -131,7 +131,7 @@
             <div id="info_msg_modal" class="modal">
                 <div class="modal-content" id="msg-body">
                     <span class="close">&times;</span><br><br>
-                    <div id="coco">
+                    <div id="caca">
                         <h4>Messages</h4>
                         <div id="btns">
                             <input type="button" value="SENT" id="snt-btn">
@@ -140,6 +140,9 @@
                         <div id="msg-content">
 
                         </div>
+                    </div>
+                    <div id="coco">
+
                     </div>
                 </div>
             </div>
